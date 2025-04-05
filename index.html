@@ -70,10 +70,23 @@
     <p>Con todo el amor del mundo. Samer/Maby❤</p>
   </div>
 
+   <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Audio + confetti on click -->
   <script>
     const audio = document.getElementById('cumpleAudio');
+
     document.addEventListener('click', () => {
+      // Reproduce el audio
       audio.play().catch(e => console.error("No se pudo reproducir el audio:", e));
+
+      // Lanza confeti
+      confetti({
+        particleCount: 150,
+        spread: 100,
+        origin: { y: 0.6 }
+      });
     }, { once: true });
   </script>
 
