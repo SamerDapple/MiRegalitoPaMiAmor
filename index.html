@@ -1,58 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feliz Cumpleaños</title>
-    <style>
-        body {
-            background: url(https://i.pinimg.com/originals/43/3a/11/433a1185cc31e09b2e0366bbe595143f.gif) no-repeat center center fixed;
-            background-size: cover;
-            font-family: Times New Roman, serif;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Cumpleaños</title>
+  <style>
+    body {
+      background: url(https://i.pinimg.com/originals/43/3a/11/433a1185cc31e09b2e0366bbe595143f.gif) no-repeat center center fixed;
+      background-size: cover;
+      font-family: Times New Roman, serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-        .message-box {
-            background-color: rgba(255, 192, 203, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 600px;
-            text-align: justify;
-            font-size: 12px;
-            width: 80%;
-        }
+    .message-box {
+      background-color: rgba(255, 192, 203, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      text-align: justify;
+      font-size: 12px;
+      width: 80%;
+    }
 
-        .message-box h1 {
-            font-size: 16px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
+    .message-box h1 {
+      font-size: 16px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-        audio {
-            display: none;
-        }
-    </style>
+    audio {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <!-- Música de cumpleaños que se auto reproduce -->
-    <audio autoplay loop>
-        <source src="happy-birthday-lofi-version-222774.mp3" type="audio/mpeg">
-    </audio>
 
-    <!-- Cuadro con el mensaje -->
-    <div class="message-box">
-        <h1>¡Feliz cumpleaños, mi amor!</h1>
-        <p>Hoy celebramos no solo un año más de vida, sino todo lo increíble que eres. Me siento tan afortunada de poder compartir mi vida contigo, aunque la distancia nos separe, cada día que paso pensando en ti y escuchándote, mi corazón se llena de felicidad. ¡25 años de tantas bendiciones, logros y momentos hermosos!</p>
-        <p>Quiero que sepas cuánto te amo y lo orgullosa que estoy de ti. A pesar de la distancia, me haces sentir cerca de ti con cada palabra, con cada risa y cada momento que pasamos juntos, incluso cuando estamos jugando o simplemente compartiendo el día. Esos pequeños momentos me alegran tanto, y me recuerdan lo afortunada que soy de tenerte en mi vida.</p>
-        <p>Te deseo toda la felicidad del mundo, porque te lo mereces más que nadie. Estoy segura de que este será un año lleno de nuevos proyectos, metas y sueños por alcanzar, y quiero que sepas que siempre estaré aquí, apoyándote en cada paso, celebrando tus victorias y aprendiendo junto a ti.</p>
-        <p>Sé que llegarás tan lejos como te lo propongas, porque tienes una determinación y pasión que me inspiran cada día. Juntos, no hay meta que no podamos alcanzar.</p>
-        <p>Te amo con todo mi corazón, y deseo que este nuevo año de vida sea solo el inicio de todo lo grandioso que está por venir.</p>
-        <p>Con todo el amor del mundo. Samer/Maby❤</p>
-    </div>
+  <!-- Música de cumpleaños -->
+  <audio id="cumpleAudio" loop>
+    <source src="happy-birthday-lofi-version-222774.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Cuadro con el mensaje -->
+  <div class="message-box">
+    <h1>¡Feliz cumpleaños, mi amor!</h1>
+    <p>Hoy celebramos no solo un año más de vida, sino todo lo increíble que eres. Me siento tan afortunada de poder compartir mi vida contigo, aunque la distancia nos separe, cada día que paso pensando en ti y escuchándote, mi corazón se llena de felicidad. ¡25 años de tantas bendiciones, logros y momentos hermosos!</p>
+    <p>Quiero que sepas cuánto te amo y lo orgullosa que estoy de ti. A pesar de la distancia, me haces sentir cerca de ti con cada palabra, con cada risa y cada momento que pasamos juntos, incluso cuando estamos jugando o simplemente compartiendo el día. Esos pequeños momentos me alegran tanto, y me recuerdan lo afortunada que soy de tenerte en mi vida.</p>
+    <p>Te deseo toda la felicidad del mundo, porque te lo mereces más que nadie. Estoy segura de que este será un año lleno de nuevos proyectos, metas y sueños por alcanzar, y quiero que sepas que siempre estaré aquí, apoyándote en cada paso, celebrando tus victorias y aprendiendo junto a ti.</p>
+    <p>Sé que llegarás tan lejos como te lo propongas, porque tienes una determinación y pasión que me inspiran cada día. Juntos, no hay meta que no podamos alcanzar.</p>
+    <p>Te amo con todo mi corazón, y deseo que este nuevo año de vida sea solo el inicio de todo lo grandioso que está por venir.</p>
+    <p>Con todo el amor del mundo. Samer/Maby❤</p>
+  </div>
+
+  <script>
+    const audio = document.getElementById('cumpleAudio');
+    document.addEventListener('click', function () {
+      audio.play();
+    }, { once: true }); // Solo la primera vez que se haga clic
+  </script>
+
 </body>
 </html>
